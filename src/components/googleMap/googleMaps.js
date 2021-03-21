@@ -21,32 +21,32 @@ const GoogleMaps = () => {
     lat: "",
     lng: ""
   });
-  const directionsService = new google.maps.DirectionsService();
+  // const directionsService = new google.maps.DirectionsService();
   useEffect(() => {
     loadGeo();
   }, [])
   useEffect(() => {
     loadHospitals();
   }, [global.painLevel])
-  useEffect(() => {
-    const destination = global.destination;
-    const origin = global.location;
-    directionsService.route(
-      {
-        origin: origin,
-        destination: destination,
-        travelMode: google.maps.TravelMode.DRIVING
-      },
-      (result, status) => {
-        if (status === google.maps.DirectionsStatus.OK) {
-          console.log('logging direction result: ', result)
-          setDirection(result);
-        } else {
-          console.error(`error fetching directions ${result}`);
-        }
-      }
-    );
-  }, [global.destination]);
+  // useEffect(() => {
+  //   const destination = global.destination;
+  //   const origin = global.location;
+  //   directionsService.route(
+  //     {
+  //       origin: origin,
+  //       destination: destination,
+  //       travelMode: google.maps.TravelMode.DRIVING
+  //     },
+  //     (result, status) => {
+  //       if (status === google.maps.DirectionsStatus.OK) {
+  //         console.log('logging direction result: ', result)
+  //         setDirection(result);
+  //       } else {
+  //         console.error(`error fetching directions ${result}`);
+  //       }
+  //     }
+  //   );
+  // }, [global.destination]);
 
 
 

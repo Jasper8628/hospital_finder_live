@@ -32,7 +32,7 @@ function Home() {
         <Slider />
 
       </div>
-      <GoogleMaps />
+      {/* <GoogleMaps /> */}
 
     </div>
 
